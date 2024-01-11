@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="App.BaseSplashScreen.Theme" parent="Theme.SplashScreen">
+        <item name="android:windowSplashScreenBackground">#FFFF</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_home</item>
+        <item name="postSplashScreenTheme">@style/Theme.NewsApp</item>
+    </style>
+</resources>

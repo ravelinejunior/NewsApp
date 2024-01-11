@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.raveline.newsapp-mergeDebugResources-72:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/res/values-night/colors.xml",
+                    "from": {
+                        "startLines": "5,2,6,7,8,9,3,4",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "198,55,237,288,346,392,105,153",
+                        "endColumns": "38,49,50,57,45,41,47,44",
+                        "endOffsets": "232,100,283,341,387,429,148,193"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,94,144,195,253,299,341,389",
+                        "endColumns": "38,49,50,57,45,41,47,44",
+                        "endOffsets": "89,139,190,248,294,336,384,429"
+                    }
+                },
+                {
+                    "source": "/home/fh-junior/.gradle/caches/transforms-3/4f70e3e7f80370f2a9126033e5364e16/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "520,590,674,758,854,956,1058,1152",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "585,669,753,849,951,1053,1147,1236"
+                    }
+                },
+                {
+                    "source": "/home/fh-junior/.gradle/caches/transforms-3/53970675545025514d5c69a8398e9c8a/transformed/core-splashscreen-1.0.1/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "85",
+                        "endOffsets": "136"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "434",
+                        "endColumns": "85",
+                        "endOffsets": "515"
+                    }
+                }
+            ]
+        }
+    ]
+}
