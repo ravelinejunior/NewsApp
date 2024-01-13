@@ -17,6 +17,23 @@ import com.raveline.newsapp.presentation.screen.onboarding.OnBoardingViewModel
 import com.raveline.newsapp.presentation.screen.search.SearchScreen
 import com.raveline.newsapp.presentation.screen.search.components.SearchViewModel
 
+/**
+ * `NavGraph` is a composable function that represents the navigation graph of the application.
+ * This function is responsible for managing the navigation between different screens in the application.
+ *
+ * @param startDestination A `String` that represents the start destination of the navigation graph.
+ *
+ * @function NavHost This function creates a navigation host that hosts the navigation graph.
+ * @param navController An instance of `NavController` which is used to navigate between different composables.
+ * @param startDestination A `String` that represents the start destination of the `NavHost`.
+ *
+ * @function navigation This function creates a navigation graph within the `NavHost`.
+ * @param route A `String` that represents the route of the navigation graph.
+ * @param startDestination A `String` that represents the start destination of the navigation graph.
+ *
+ * @function composable This function creates a composable destination within the navigation graph.
+ * @param route A `String` that represents the route of the composable destination.
+ */
 @RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
 @Composable
 fun NavGraph(
