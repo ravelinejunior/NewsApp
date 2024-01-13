@@ -1,6 +1,33 @@
-# NewsApp
-An Android app built with Jetpack Compose and the latest android libraries.
-To learn how to build this app from scratch you can watch my playlist on YouTube : https://www.youtube.com/playlist?list=PLzZEuVaFb9Exi-pc8qtHBrrLg8bUn-TP6
+# News API Android Compose Project
+
+## Overview
+This project is a news application built with Jetpack Compose and Kotlin. It uses the News API to fetch the latest news articles and display them in a user-friendly interface.
+
+## Features
+- Fetch and display news articles from the News API.
+- Search for articles based on keywords.
+- View details of each article.
+- Navigate between different screens using Jetpack Navigation.
+
+## Requirements
+- Android Studio Arctic Fox 2020.3.1 or later
+- Build version SDK: 31
+- Kotlin version: 1.5.0
+
+## Libraries Used
+- Jetpack Compose for the UI
+- Hilt for dependency injection
+- Retrofit for network requests
+- Paging 3 for pagination
+- Coil for image loading
+
+## Setup
+1. Clone the repository.
+2. Open the project in Android Studio.
+3. Get your API key from News API.
+4. Replace `YOUR_API_KEY` in `local.properties` with your actual API key.
+5. Build and run the project.
+
 
 # Preview 
 <img width="716" alt="Screenshot 2023-08-23 at 4 11 00 PM" src="https://github.com/mohammednawas8/NewsApp/assets/78867217/0ba957e5-8b70-42d6-ab09-2cf38ba3936e"><br>
