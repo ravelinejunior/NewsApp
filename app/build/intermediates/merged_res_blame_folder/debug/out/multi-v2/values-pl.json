@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.raveline.newsapp-mergeDebugResources-72:/values-pl/values-pl.xml",
+            "outputFile": "com.raveline.newsapp-mergeDebugResources-73:/values-pl/values-pl.xml",
             "map": [
                 {
                     "source": "/home/fh-junior/.gradle/caches/transforms-3/4c0ed8a1b37a0c610d585bc48962fdb1/transformed/core-1.11.0-beta02/res/values-pl/values-pl.xml",

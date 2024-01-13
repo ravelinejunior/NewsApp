@@ -1,5 +1,7 @@
 package com.raveline.newsapp.presentation.screen.home
 
+import android.os.Build
+import androidx.annotation.RequiresExtension
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -38,6 +40,7 @@ import com.raveline.newsapp.presentation.navigation.Route
 import com.raveline.newsapp.ui.theme.Dimens.ExtraSmallPadding
 import com.raveline.newsapp.ui.theme.Dimens.MediumPadding1
 
+@RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun HomeScreen(
@@ -99,13 +102,13 @@ fun HomeScreen(
 
         SearchBar(
             text = searchText,
-            readOnly = false,
+            readOnly = true,
             onValueChanged = {
                 searchText = it
             },
             onSearch = {},
             onClick = {
-                //navigate(Route.SearchScreenRoute.route)
+                navigate(Route.SearchScreenRoute.route)
             }
         )
 

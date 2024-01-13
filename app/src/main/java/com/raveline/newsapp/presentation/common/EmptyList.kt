@@ -1,5 +1,8 @@
 package com.raveline.newsapp.presentation.common
 
+import android.net.http.NetworkException
+import android.os.Build
+import androidx.annotation.RequiresExtension
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -45,7 +48,9 @@ import com.raveline.newsapp.domain.model.ArticleModel
 import com.raveline.newsapp.ui.theme.Dimens.SmallPadding
 import java.net.ConnectException
 import java.net.SocketTimeoutException
+import java.net.UnknownHostException
 
+@RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
 @Composable
 fun EmptyScreen(
     error: LoadState.Error? = null,
@@ -151,6 +156,7 @@ fun EmptyContent(
     }
 }
 
+@RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
 fun parseErrorMessage(mError: LoadState.Error?): String {
     return when (mError?.error) {
         is SocketTimeoutException -> {
@@ -161,8 +167,16 @@ fun parseErrorMessage(mError: LoadState.Error?): String {
             "Internet Unavailable!"
         }
 
+        is UnknownHostException -> {
+            mError.error.message!!
+        }
+
+        is NetworkException -> {
+            "Internet Unavailable!"
+        }
+
         else -> {
-            "Unknown Error."
+            "Verify your internet connection."
         }
 
     }

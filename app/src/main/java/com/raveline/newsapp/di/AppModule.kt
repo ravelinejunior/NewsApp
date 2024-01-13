@@ -11,6 +11,7 @@ import com.raveline.newsapp.domain.use_cases.app_entry.ReadAppEntryUseCase
 import com.raveline.newsapp.domain.use_cases.app_entry.SaveAppEntryUseCase
 import com.raveline.newsapp.domain.use_cases.news.GetNewsUseCase
 import com.raveline.newsapp.domain.use_cases.news.NewsUseCaseModel
+import com.raveline.newsapp.domain.use_cases.news.SearchNewsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -44,7 +45,8 @@ object AppModule {
     @Singleton
     fun provideGetNewsUseCase(repository: NewsRepository): NewsUseCaseModel =
         NewsUseCaseModel(
-            newsUseCase = GetNewsUseCase(repository)
+            newsUseCase = GetNewsUseCase(repository),
+            searchNewsUseCase = SearchNewsUseCase(repository)
         )
 
 }

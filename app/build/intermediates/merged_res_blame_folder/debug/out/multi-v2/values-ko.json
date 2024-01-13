@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.raveline.newsapp-mergeDebugResources-72:/values-ko/values-ko.xml",
+            "outputFile": "com.raveline.newsapp-mergeDebugResources-73:/values-ko/values-ko.xml",
             "map": [
                 {
                     "source": "/home/fh-junior/.gradle/caches/transforms-3/c28e9f45fe68dfdbb40e2ec3dfc11dc1/transformed/foundation-release/res/values-ko/values-ko.xml",

@@ -1,5 +1,7 @@
 package com.raveline.newsapp.presentation.common
 
+import android.os.Build
+import androidx.annotation.RequiresExtension
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -14,6 +16,7 @@ import com.raveline.newsapp.domain.model.ArticleModel
 import com.raveline.newsapp.ui.theme.Dimens.ExtraSmallPadding2
 import com.raveline.newsapp.ui.theme.Dimens.MediumPadding1
 
+@RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
 @Composable
 fun ArticleList(
     modifier: Modifier = Modifier,
@@ -42,6 +45,7 @@ fun ArticleList(
     }
 }
 
+@RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
 @Composable
 fun handlingPagingResult(
     articles: LazyPagingItems<ArticleModel>

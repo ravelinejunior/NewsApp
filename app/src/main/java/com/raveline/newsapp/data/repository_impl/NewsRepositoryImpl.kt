@@ -4,6 +4,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.raveline.newsapp.data.remote.datasource.NewsPagingSource
+import com.raveline.newsapp.data.remote.datasource.SearchNewsPagingSource
 import com.raveline.newsapp.data.remote.services.NewsApi
 import com.raveline.newsapp.domain.model.ArticleModel
 import com.raveline.newsapp.domain.repository.NewsRepository
@@ -19,6 +20,19 @@ class NewsRepositoryImpl @Inject constructor(
             pagingSourceFactory = {
                 NewsPagingSource(
                     newsApi = newsApi,
+                    sources = sources.joinToString(",")
+                )
+            }
+        ).flow
+    }
+
+    override fun searchNews(query: String, sources: List<String>): Flow<PagingData<ArticleModel>> {
+        return Pager(
+            config = PagingConfig(10),
+            pagingSourceFactory = {
+                SearchNewsPagingSource(
+                    newsApi = newsApi,
+                    query = query,
                     sources = sources.joinToString(",")
                 )
             }
