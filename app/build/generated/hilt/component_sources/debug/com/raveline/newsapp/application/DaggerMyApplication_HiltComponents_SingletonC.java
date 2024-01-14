@@ -23,8 +23,8 @@ import com.raveline.newsapp.domain.use_cases.news.NewsUseCaseModel;
 import com.raveline.newsapp.domain.use_cases.news.SearchNewsUseCase;
 import com.raveline.newsapp.presentation.screen.home.HomeViewModel;
 import com.raveline.newsapp.presentation.screen.home.HomeViewModel_HiltModules_KeyModule_ProvideFactory;
-import com.raveline.newsapp.presentation.screen.onboarding.OnBoardingViewModel;
-import com.raveline.newsapp.presentation.screen.onboarding.OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel;
+import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.raveline.newsapp.presentation.screen.search.components.SearchViewModel;
 import com.raveline.newsapp.presentation.screen.search.components.SearchViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.raveline.newsapp.presentation.viewmodel.MainViewModel;
@@ -462,7 +462,7 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(4).put("com.raveline.newsapp.presentation.screen.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.raveline.newsapp.presentation.viewmodel.MainViewModel", ((Provider) mainViewModelProvider)).put("com.raveline.newsapp.presentation.screen.onboarding.OnBoardingViewModel", ((Provider) onBoardingViewModelProvider)).put("com.raveline.newsapp.presentation.screen.search.components.SearchViewModel", ((Provider) searchViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(4).put("com.raveline.newsapp.presentation.screen.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.raveline.newsapp.presentation.viewmodel.MainViewModel", ((Provider) mainViewModelProvider)).put("com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel", ((Provider) onBoardingViewModelProvider)).put("com.raveline.newsapp.presentation.screen.search.components.SearchViewModel", ((Provider) searchViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -492,7 +492,7 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
           case 1: // com.raveline.newsapp.presentation.viewmodel.MainViewModel 
           return (T) new MainViewModel(singletonCImpl.providesAppEntryUseCaseProvider.get());
 
-          case 2: // com.raveline.newsapp.presentation.screen.onboarding.OnBoardingViewModel 
+          case 2: // com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel 
           return (T) new OnBoardingViewModel(singletonCImpl.providesAppEntryUseCaseProvider.get());
 
           case 3: // com.raveline.newsapp.presentation.screen.search.components.SearchViewModel 

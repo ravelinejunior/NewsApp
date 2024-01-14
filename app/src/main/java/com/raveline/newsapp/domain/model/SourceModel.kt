@@ -8,7 +8,7 @@ import android.os.Parcelable
 @Parcelize
 data class SourceModel(
     @SerializedName("id")
-    val id: String?,
+    val id: String,
     @SerializedName("name")
-    val name: String?
+    val name: String
 ) : Parcelable

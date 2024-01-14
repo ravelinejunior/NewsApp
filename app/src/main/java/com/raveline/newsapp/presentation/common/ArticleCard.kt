@@ -28,6 +28,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import coil.request.CachePolicy
 import coil.request.ImageRequest
 import com.raveline.newsapp.R
 import com.raveline.newsapp.domain.model.ArticleModel
@@ -54,7 +55,15 @@ fun ArticleCard(
             modifier = modifier
                 .size(ArticleCardSize)
                 .clip(RoundedCornerShape(16.dp)),
-            model = ImageRequest.Builder(context).data(article.urlToImage).build(),
+            model = ImageRequest
+                .Builder(context = context)
+                .data(article.urlToImage)
+                .crossfade(true)
+                .allowHardware(true)
+                .error(R.drawable.ic_network_error)
+                .memoryCachePolicy(CachePolicy.ENABLED)
+                .placeholder(R.drawable.placeholder)
+                .build(),
             contentDescription = "Image Article Description",
             contentScale = ContentScale.Crop
         )

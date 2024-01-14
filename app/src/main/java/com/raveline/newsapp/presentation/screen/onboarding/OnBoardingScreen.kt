@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import com.raveline.newsapp.domain.model.pages
 import com.raveline.newsapp.presentation.common.NewsButton
 import com.raveline.newsapp.presentation.common.NewsTextButton
+import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingEvent
 import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingPage
 import com.raveline.newsapp.presentation.screen.onboarding.components.PageIndicator
 import com.raveline.newsapp.ui.theme.Dimens

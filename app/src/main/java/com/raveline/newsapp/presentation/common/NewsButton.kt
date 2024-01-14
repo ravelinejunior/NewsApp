@@ -25,7 +25,8 @@ fun NewsButton(
     ) {
         Text(
             text = text,
-            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold)
+            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
+            color = MaterialTheme.colorScheme.onPrimary
         )
     }
 }
@@ -37,12 +38,16 @@ fun NewsTextButton(
 ) {
     TextButton(
         onClick = onClick,
-        shape = RoundedCornerShape(size = 8.dp)
+        shape = RoundedCornerShape(size = 8.dp),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = MaterialTheme.colorScheme.background,
+            contentColor = MaterialTheme.colorScheme.onBackground,
+        ),
     ) {
         Text(
             text = text,
             style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
-            color = Color.White
+            color = MaterialTheme.colorScheme.primary
         )
     }
 }

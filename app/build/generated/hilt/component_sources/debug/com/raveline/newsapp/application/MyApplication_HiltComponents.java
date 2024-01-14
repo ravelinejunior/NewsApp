@@ -4,7 +4,7 @@ import com.raveline.newsapp.MainActivity_GeneratedInjector;
 import com.raveline.newsapp.di.AppModule;
 import com.raveline.newsapp.di.NetworkModule;
 import com.raveline.newsapp.presentation.screen.home.HomeViewModel_HiltModules;
-import com.raveline.newsapp.presentation.screen.onboarding.OnBoardingViewModel_HiltModules;
+import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel_HiltModules;
 import com.raveline.newsapp.presentation.screen.search.components.SearchViewModel_HiltModules;
 import com.raveline.newsapp.presentation.viewmodel.MainViewModel_HiltModules;
 import dagger.Binds;

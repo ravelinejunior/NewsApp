@@ -13,7 +13,7 @@ import com.raveline.newsapp.presentation.navigation.Route
 import com.raveline.newsapp.presentation.screen.home.HomeScreen
 import com.raveline.newsapp.presentation.screen.home.HomeViewModel
 import com.raveline.newsapp.presentation.screen.onboarding.OnBoardingScreen
-import com.raveline.newsapp.presentation.screen.onboarding.OnBoardingViewModel
+import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel
 import com.raveline.newsapp.presentation.screen.search.SearchScreen
 import com.raveline.newsapp.presentation.screen.search.components.SearchViewModel
 
