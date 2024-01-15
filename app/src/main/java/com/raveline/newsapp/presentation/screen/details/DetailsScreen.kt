@@ -167,6 +167,7 @@ fun DetailsScreenPreview() {
     NewsAppTheme {
         DetailsScreen(
             article = ArticleModel(
+                id = 0,
                 source = SourceModel("", ""),
                 "Nanan",
                 "Jnsldnlasn",

@@ -2,6 +2,7 @@ package com.raveline.newsapp.application;
 
 import com.raveline.newsapp.MainActivity_GeneratedInjector;
 import com.raveline.newsapp.di.AppModule;
+import com.raveline.newsapp.di.DatabaseModule;
 import com.raveline.newsapp.di.NetworkModule;
 import com.raveline.newsapp.presentation.screen.home.HomeViewModel_HiltModules;
 import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel_HiltModules;
@@ -132,6 +133,7 @@ public final class MyApplication_HiltComponents {
       modules = {
           AppModule.class,
           ApplicationContextModule.class,
+          DatabaseModule.class,
           HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class,
           ActivityRetainedCBuilderModule.class,
           ServiceCBuilderModule.class,

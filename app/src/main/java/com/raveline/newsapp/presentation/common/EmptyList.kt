@@ -168,7 +168,7 @@ fun parseErrorMessage(mError: LoadState.Error?): String {
         }
 
         is UnknownHostException -> {
-            mError.error.message!!
+            "${mError.error.message!!}\nVerify your internet connection."
         }
 
         is NetworkException -> {
@@ -182,6 +182,7 @@ fun parseErrorMessage(mError: LoadState.Error?): String {
     }
 }
 
+@RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
 @Preview(showBackground = true)
 @Composable
 fun EmptyScreenPreview() {

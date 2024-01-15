@@ -1,4 +1,4 @@
-#Sun Jan 14 13:22:08 WET 2024
+#Mon Jan 15 10:15:37 WET 2024
 base.0=/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.10=/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex
