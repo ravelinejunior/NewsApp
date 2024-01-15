@@ -10,6 +10,8 @@ import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.raveline.newsapp.presentation.navigation.Route
+import com.raveline.newsapp.presentation.screen.bookmark.BookmarkScreen
+import com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel
 import com.raveline.newsapp.presentation.screen.home.HomeScreen
 import com.raveline.newsapp.presentation.screen.home.HomeViewModel
 import com.raveline.newsapp.presentation.screen.onboarding.OnBoardingScreen
@@ -80,8 +82,23 @@ fun NavGraph(
                     state = searchViewModel.state.value,
                     events = searchViewModel::onEvent,
                     navigate = {
-
+                        navController.navigate(it)
                     }
+                )
+            }
+        }
+
+        navigation(
+            startDestination = Route.BookmarkScreenRoute.route,
+            route = Route.SearchScreenRoute.route
+        ) {
+            composable(route = Route.BookmarkScreenRoute.route) {
+                val bookmarkViewModel: BookmarkViewModel = hiltViewModel()
+                BookmarkScreen(
+                    state = bookmarkViewModel.state.value,
+                    navigate = {
+                        navController.navigate(it)
+                    },
                 )
             }
         }

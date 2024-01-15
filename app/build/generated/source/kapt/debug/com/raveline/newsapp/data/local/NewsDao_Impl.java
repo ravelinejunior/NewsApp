@@ -105,8 +105,7 @@ public final class NewsDao_Impl implements NewsDao {
   }
 
   @Override
-  public Object insertNews(final ArticleModel articleModel,
-      final Continuation<? super Unit> $completion) {
+  public Object insertNews(final ArticleModel articleModel, final Continuation<? super Unit> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -119,12 +118,11 @@ public final class NewsDao_Impl implements NewsDao {
           __db.endTransaction();
         }
       }
-    }, $completion);
+    }, arg1);
   }
 
   @Override
-  public Object deleteNews(final ArticleModel articleModel,
-      final Continuation<? super Unit> $completion) {
+  public Object deleteNews(final ArticleModel articleModel, final Continuation<? super Unit> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -137,7 +135,7 @@ public final class NewsDao_Impl implements NewsDao {
           __db.endTransaction();
         }
       }
-    }, $completion);
+    }, arg1);
   }
 
   @Override

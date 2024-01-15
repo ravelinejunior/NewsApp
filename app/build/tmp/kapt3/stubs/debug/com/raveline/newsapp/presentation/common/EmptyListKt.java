@@ -24,6 +24,7 @@ public final class EmptyListKt {
         return null;
     }
     
+    @androidx.annotation.RequiresExtension(extension = android.os.Build.VERSION_CODES.S, version = 7)
     @androidx.compose.ui.tooling.preview.Preview(showBackground = true)
     @androidx.compose.runtime.Composable
     public static final void EmptyScreenPreview() {

@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.room.Room
 import com.raveline.newsapp.data.local.NewsDao
 import com.raveline.newsapp.data.local.NewsDatabase
+import com.raveline.newsapp.data.local.NewsSourceTypeConverter
 import com.raveline.newsapp.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -22,7 +23,8 @@ object DatabaseModule {
             context = application,
             klass = NewsDatabase::class.java,
             name = Constants.NEWS_DATABASE_NAME
-        ).fallbackToDestructiveMigration()
+        ).addTypeConverter(NewsSourceTypeConverter())
+            .fallbackToDestructiveMigration()
             .allowMainThreadQueries()
             .build()
 

@@ -1,6 +1,7 @@
 package com.raveline.newsapp.di
 
 import android.app.Application
+import com.raveline.newsapp.data.local.NewsDao
 import com.raveline.newsapp.data.manager_impl.LocalUserManagerImpl
 import com.raveline.newsapp.data.remote.services.NewsApi
 import com.raveline.newsapp.data.repository_impl.NewsRepositoryImpl
@@ -9,9 +10,12 @@ import com.raveline.newsapp.domain.repository.NewsRepository
 import com.raveline.newsapp.domain.use_cases.app_entry.AppEntryUseCasesModel
 import com.raveline.newsapp.domain.use_cases.app_entry.ReadAppEntryUseCase
 import com.raveline.newsapp.domain.use_cases.app_entry.SaveAppEntryUseCase
+import com.raveline.newsapp.domain.use_cases.news.DeleteArticleUseCase
 import com.raveline.newsapp.domain.use_cases.news.GetNewsUseCase
+import com.raveline.newsapp.domain.use_cases.news.GetStoredArticlesUseCase
 import com.raveline.newsapp.domain.use_cases.news.NewsUseCaseModel
 import com.raveline.newsapp.domain.use_cases.news.SearchNewsUseCase
+import com.raveline.newsapp.domain.use_cases.news.UpsertArticleUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -43,10 +47,16 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideGetNewsUseCase(repository: NewsRepository): NewsUseCaseModel =
+    fun provideGetNewsUseCase(
+        repository: NewsRepository,
+        dao: NewsDao
+    ): NewsUseCaseModel =
         NewsUseCaseModel(
             newsUseCase = GetNewsUseCase(repository),
-            searchNewsUseCase = SearchNewsUseCase(repository)
+            searchNewsUseCase = SearchNewsUseCase(repository),
+            upsertArticleUseCase = UpsertArticleUseCase(dao),
+            deleteArticleUseCase = DeleteArticleUseCase(dao),
+            getStoredArticlesUseCase = GetStoredArticlesUseCase(dao)
         )
 
 }

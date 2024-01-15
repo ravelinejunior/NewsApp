@@ -27,7 +27,7 @@ fun ArticleList(
 
     if (handlingPagingResult) {
         LazyColumn(
-            modifier = Modifier.fillMaxSize(),
+            modifier = modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(MediumPadding1),
             contentPadding = PaddingValues(all = ExtraSmallPadding2)
         ) {
@@ -41,6 +41,34 @@ fun ArticleList(
         EmptyScreen(
             error = null,
             articles = articles
+        )
+    }
+}
+
+@RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
+@Composable
+fun ArticleList(
+    modifier: Modifier = Modifier,
+    articles: List<ArticleModel>,
+    onClick: (ArticleModel) -> Unit
+) {
+
+    if (articles.isNotEmpty()) {
+        LazyColumn(
+            modifier = modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.spacedBy(MediumPadding1),
+            contentPadding = PaddingValues(all = ExtraSmallPadding2)
+        ) {
+            items(count = articles.size) {
+                articles[it].let { article ->
+                    ArticleCard(article = article, onClick = { onClick(article) })
+                }
+            }
+        }
+    } else {
+        EmptyScreen(
+            error = null,
+            articles = null
         )
     }
 }

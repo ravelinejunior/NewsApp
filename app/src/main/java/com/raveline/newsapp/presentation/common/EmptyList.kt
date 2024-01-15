@@ -57,7 +57,7 @@ fun EmptyScreen(
     articles: LazyPagingItems<ArticleModel>? = null
 ) {
     var message by remember {
-        mutableStateOf("Searching News")
+        mutableStateOf("Empty News Here")
     }
 
     var resRaw by remember {
