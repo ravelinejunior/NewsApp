@@ -6,7 +6,7 @@ import com.raveline.newsapp.di.DatabaseModule;
 import com.raveline.newsapp.di.NetworkModule;
 import com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel_HiltModules;
 import com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel_HiltModules;
-import com.raveline.newsapp.presentation.screen.home.HomeViewModel_HiltModules;
+import com.raveline.newsapp.presentation.screen.home.components.HomeViewModel_HiltModules;
 import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel_HiltModules;
 import com.raveline.newsapp.presentation.screen.search.components.SearchViewModel_HiltModules;
 import com.raveline.newsapp.presentation.viewmodel.MainViewModel_HiltModules;

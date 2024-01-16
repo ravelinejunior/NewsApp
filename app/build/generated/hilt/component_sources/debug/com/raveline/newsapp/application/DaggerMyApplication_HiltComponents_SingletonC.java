@@ -30,8 +30,8 @@ import com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkView
 import com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel;
 import com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel_HiltModules_KeyModule_ProvideFactory;
-import com.raveline.newsapp.presentation.screen.home.HomeViewModel;
-import com.raveline.newsapp.presentation.screen.home.HomeViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.raveline.newsapp.presentation.screen.home.components.HomeViewModel;
+import com.raveline.newsapp.presentation.screen.home.components.HomeViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel;
 import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.raveline.newsapp.presentation.screen.search.components.SearchViewModel;
@@ -486,7 +486,7 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(6).put("com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel", ((Provider) bookmarkViewModelProvider)).put("com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel", ((Provider) detailsViewModelProvider)).put("com.raveline.newsapp.presentation.screen.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.raveline.newsapp.presentation.viewmodel.MainViewModel", ((Provider) mainViewModelProvider)).put("com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel", ((Provider) onBoardingViewModelProvider)).put("com.raveline.newsapp.presentation.screen.search.components.SearchViewModel", ((Provider) searchViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(6).put("com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel", ((Provider) bookmarkViewModelProvider)).put("com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel", ((Provider) detailsViewModelProvider)).put("com.raveline.newsapp.presentation.screen.home.components.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.raveline.newsapp.presentation.viewmodel.MainViewModel", ((Provider) mainViewModelProvider)).put("com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel", ((Provider) onBoardingViewModelProvider)).put("com.raveline.newsapp.presentation.screen.search.components.SearchViewModel", ((Provider) searchViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -516,7 +516,7 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
           case 1: // com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel 
           return (T) new DetailsViewModel(singletonCImpl.provideGetNewsUseCaseProvider.get());
 
-          case 2: // com.raveline.newsapp.presentation.screen.home.HomeViewModel 
+          case 2: // com.raveline.newsapp.presentation.screen.home.components.HomeViewModel 
           return (T) new HomeViewModel(singletonCImpl.provideGetNewsUseCaseProvider.get());
 
           case 3: // com.raveline.newsapp.presentation.viewmodel.MainViewModel 

@@ -108,8 +108,7 @@ public final class NewsDao_Impl implements NewsDao {
   }
 
   @Override
-  public Object upsertNews(final ArticleModel articleModel,
-      final Continuation<? super Unit> $completion) {
+  public Object upsertNews(final ArticleModel articleModel, final Continuation<? super Unit> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -122,12 +121,11 @@ public final class NewsDao_Impl implements NewsDao {
           __db.endTransaction();
         }
       }
-    }, $completion);
+    }, arg1);
   }
 
   @Override
-  public Object deleteNews(final ArticleModel articleModel,
-      final Continuation<? super Unit> $completion) {
+  public Object deleteNews(final ArticleModel articleModel, final Continuation<? super Unit> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -140,7 +138,7 @@ public final class NewsDao_Impl implements NewsDao {
           __db.endTransaction();
         }
       }
-    }, $completion);
+    }, arg1);
   }
 
   @Override
@@ -239,7 +237,7 @@ public final class NewsDao_Impl implements NewsDao {
 
   @Override
   public Object getSelectedArticle(final String url,
-      final Continuation<? super ArticleModel> $completion) {
+      final Continuation<? super ArticleModel> arg1) {
     final String _sql = "SELECT * FROM ARTICLES_TABLE WHERE url =?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -332,7 +330,7 @@ public final class NewsDao_Impl implements NewsDao {
           _statement.release();
         }
       }
-    }, $completion);
+    }, arg1);
   }
 
   public static List<Class<?>> getRequiredConverters() {

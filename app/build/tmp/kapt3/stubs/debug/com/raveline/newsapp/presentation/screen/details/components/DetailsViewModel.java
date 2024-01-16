@@ -1,5 +1,20 @@
 package com.raveline.newsapp.presentation.screen.details.components;
 
+/**
+ * `DetailsViewModel` is a ViewModel class that is responsible for preparing and managing the data for `DetailsScreen`.
+ * It's annotated with `@HiltViewModel`, indicating that it's a ViewModel that will be injected by Hilt.
+ *
+ * @property newsUseCase An instance of `NewsUseCaseModel` which is used to interact with the data layer of the application.
+ * @property sideEffect A mutable state that holds a String value. It's used to handle side effects in the UI.
+ *
+ * @constructor Injects the required dependencies.
+ *
+ * @param newsUseCase An instance of `NewsUseCaseModel`.
+ *
+ * @method onEvent Handles the events from the UI and performs the necessary actions.
+ * @method upsertArticle Inserts or updates an article in the database.
+ * @method deleteArticle Deletes an article from the database.
+ */
 @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\b\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0007\u0018\u00002\u00020\u0001B\u000f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u0019\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u0011H\u0082@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u0012J\u000e\u0010\u0013\u001a\u00020\u000f2\u0006\u0010\u0014\u001a\u00020\u0015J\u0019\u0010\u0016\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u0011H\u0082@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u0012R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R/\u0010\u0007\u001a\u0004\u0018\u00010\u00062\b\u0010\u0005\u001a\u0004\u0018\u00010\u00068F@BX\u0086\u008e\u0002\u00a2\u0006\u0012\n\u0004\b\f\u0010\r\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u000b\u0082\u0002\u0004\n\u0002\b\u0019\u00a8\u0006\u0017"}, d2 = {"Lcom/raveline/newsapp/presentation/screen/details/components/DetailsViewModel;", "Landroidx/lifecycle/ViewModel;", "newsUseCase", "Lcom/raveline/newsapp/domain/use_cases/news/NewsUseCaseModel;", "(Lcom/raveline/newsapp/domain/use_cases/news/NewsUseCaseModel;)V", "<set-?>", "", "sideEffect", "getSideEffect", "()Ljava/lang/String;", "setSideEffect", "(Ljava/lang/String;)V", "sideEffect$delegate", "Landroidx/compose/runtime/MutableState;", "deleteArticle", "", "article", "Lcom/raveline/newsapp/domain/model/ArticleModel;", "(Lcom/raveline/newsapp/domain/model/ArticleModel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "onEvent", "event", "Lcom/raveline/newsapp/presentation/screen/details/components/DetailsEvent;", "upsertArticle", "app_debug"})
 @dagger.hilt.android.lifecycle.HiltViewModel
 public final class DetailsViewModel extends androidx.lifecycle.ViewModel {

@@ -71,115 +71,116 @@
 43-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:14:9-54
 44        android:supportsRtl="true"
 44-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:15:9-35
-45        android:theme="@style/Theme.NewsApp" >
-45-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:17:9-45
-46        <activity
-46-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:19:9-28:20
-47            android:name="com.raveline.newsapp.MainActivity"
-47-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:20:13-41
-48            android:exported="true"
-48-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:21:13-36
-49            android:theme="@style/App.BaseSplashScreen.Theme" >
-49-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:22:13-62
-50            <intent-filter>
-50-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:23:13-27:29
-51                <action android:name="android.intent.action.MAIN" />
-51-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:24:17-69
-51-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:24:25-66
-52
-53                <category android:name="android.intent.category.LAUNCHER" />
-53-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:26:17-77
-53-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:26:27-74
-54            </intent-filter>
-55        </activity>
-56
-57        <service
-57-->[androidx.room:room-runtime:2.5.2] /home/fh-junior/.gradle/caches/transforms-3/05da82cf7c58a5c76d745c3bd84634cc/transformed/room-runtime-2.5.2/AndroidManifest.xml:24:9-28:63
-58            android:name="androidx.room.MultiInstanceInvalidationService"
-58-->[androidx.room:room-runtime:2.5.2] /home/fh-junior/.gradle/caches/transforms-3/05da82cf7c58a5c76d745c3bd84634cc/transformed/room-runtime-2.5.2/AndroidManifest.xml:25:13-74
-59            android:directBootAware="true"
-59-->[androidx.room:room-runtime:2.5.2] /home/fh-junior/.gradle/caches/transforms-3/05da82cf7c58a5c76d745c3bd84634cc/transformed/room-runtime-2.5.2/AndroidManifest.xml:26:13-43
-60            android:exported="false" />
-60-->[androidx.room:room-runtime:2.5.2] /home/fh-junior/.gradle/caches/transforms-3/05da82cf7c58a5c76d745c3bd84634cc/transformed/room-runtime-2.5.2/AndroidManifest.xml:27:13-37
-61
-62        <activity
-62-->[androidx.compose.ui:ui-test-manifest:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/1b5d12146ce7106a8f689f357ed26de9/transformed/ui-test-manifest-1.6.0-beta01/AndroidManifest.xml:23:9-25:39
-63            android:name="androidx.activity.ComponentActivity"
-63-->[androidx.compose.ui:ui-test-manifest:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/1b5d12146ce7106a8f689f357ed26de9/transformed/ui-test-manifest-1.6.0-beta01/AndroidManifest.xml:24:13-63
-64            android:exported="true" />
-64-->[androidx.compose.ui:ui-test-manifest:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/1b5d12146ce7106a8f689f357ed26de9/transformed/ui-test-manifest-1.6.0-beta01/AndroidManifest.xml:25:13-36
-65        <activity
-65-->[androidx.compose.ui:ui-tooling-android:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/de4371ce334916eab5768dd85bdd126d/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
-66            android:name="androidx.compose.ui.tooling.PreviewActivity"
-66-->[androidx.compose.ui:ui-tooling-android:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/de4371ce334916eab5768dd85bdd126d/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
-67            android:exported="true" />
-67-->[androidx.compose.ui:ui-tooling-android:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/de4371ce334916eab5768dd85bdd126d/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
-68
-69        <provider
-69-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-70            android:name="androidx.startup.InitializationProvider"
-70-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
-71            android:authorities="com.raveline.newsapp.androidx-startup"
-71-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
-72            android:exported="false" >
-72-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
-73            <meta-data
-73-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-74                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-74-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-75                android:value="androidx.startup" />
-75-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-76            <meta-data
-76-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/fh-junior/.gradle/caches/transforms-3/ecf0bd12d1d08353aeb953f6aa2ae31d/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
-77                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-77-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/fh-junior/.gradle/caches/transforms-3/ecf0bd12d1d08353aeb953f6aa2ae31d/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
-78                android:value="androidx.startup" />
-78-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/fh-junior/.gradle/caches/transforms-3/ecf0bd12d1d08353aeb953f6aa2ae31d/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
-79            <meta-data
-79-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
-80                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-80-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
-81                android:value="androidx.startup" />
-81-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
-82        </provider>
-83
-84        <receiver
-84-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
-85            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-85-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
-86            android:directBootAware="false"
-86-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
-87            android:enabled="true"
-87-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
-88            android:exported="true"
-88-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
-89            android:permission="android.permission.DUMP" >
-89-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
-90            <intent-filter>
-90-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
-91                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-91-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-91-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
-92            </intent-filter>
-93            <intent-filter>
-93-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
-94                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-94-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-94-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
-95            </intent-filter>
-96            <intent-filter>
-96-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
-97                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-97-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-97-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
-98            </intent-filter>
-99            <intent-filter>
-99-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
-100                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-100-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-100-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
-101            </intent-filter>
-102        </receiver>
-103    </application>
-104
-105</manifest>
+45        android:testOnly="true"
+46        android:theme="@style/Theme.NewsApp" >
+46-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:17:9-45
+47        <activity
+47-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:19:9-28:20
+48            android:name="com.raveline.newsapp.MainActivity"
+48-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:20:13-41
+49            android:exported="true"
+49-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:21:13-36
+50            android:theme="@style/App.BaseSplashScreen.Theme" >
+50-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:22:13-62
+51            <intent-filter>
+51-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:23:13-27:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:24:17-69
+52-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:24:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:26:17-77
+54-->/media/fh-junior/e117dcb4-fb73-498b-8626-11eb7e34e0a3/AndroidStudioProjects/NewsApp/app/src/main/AndroidManifest.xml:26:27-74
+55            </intent-filter>
+56        </activity>
+57
+58        <service
+58-->[androidx.room:room-runtime:2.5.2] /home/fh-junior/.gradle/caches/transforms-3/05da82cf7c58a5c76d745c3bd84634cc/transformed/room-runtime-2.5.2/AndroidManifest.xml:24:9-28:63
+59            android:name="androidx.room.MultiInstanceInvalidationService"
+59-->[androidx.room:room-runtime:2.5.2] /home/fh-junior/.gradle/caches/transforms-3/05da82cf7c58a5c76d745c3bd84634cc/transformed/room-runtime-2.5.2/AndroidManifest.xml:25:13-74
+60            android:directBootAware="true"
+60-->[androidx.room:room-runtime:2.5.2] /home/fh-junior/.gradle/caches/transforms-3/05da82cf7c58a5c76d745c3bd84634cc/transformed/room-runtime-2.5.2/AndroidManifest.xml:26:13-43
+61            android:exported="false" />
+61-->[androidx.room:room-runtime:2.5.2] /home/fh-junior/.gradle/caches/transforms-3/05da82cf7c58a5c76d745c3bd84634cc/transformed/room-runtime-2.5.2/AndroidManifest.xml:27:13-37
+62
+63        <activity
+63-->[androidx.compose.ui:ui-test-manifest:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/1b5d12146ce7106a8f689f357ed26de9/transformed/ui-test-manifest-1.6.0-beta01/AndroidManifest.xml:23:9-25:39
+64            android:name="androidx.activity.ComponentActivity"
+64-->[androidx.compose.ui:ui-test-manifest:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/1b5d12146ce7106a8f689f357ed26de9/transformed/ui-test-manifest-1.6.0-beta01/AndroidManifest.xml:24:13-63
+65            android:exported="true" />
+65-->[androidx.compose.ui:ui-test-manifest:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/1b5d12146ce7106a8f689f357ed26de9/transformed/ui-test-manifest-1.6.0-beta01/AndroidManifest.xml:25:13-36
+66        <activity
+66-->[androidx.compose.ui:ui-tooling-android:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/de4371ce334916eab5768dd85bdd126d/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+67            android:name="androidx.compose.ui.tooling.PreviewActivity"
+67-->[androidx.compose.ui:ui-tooling-android:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/de4371ce334916eab5768dd85bdd126d/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+68            android:exported="true" />
+68-->[androidx.compose.ui:ui-tooling-android:1.6.0-beta01] /home/fh-junior/.gradle/caches/transforms-3/de4371ce334916eab5768dd85bdd126d/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+69
+70        <provider
+70-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+71            android:name="androidx.startup.InitializationProvider"
+71-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+72            android:authorities="com.raveline.newsapp.androidx-startup"
+72-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+73            android:exported="false" >
+73-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+74            <meta-data
+74-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+75                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+75-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+76                android:value="androidx.startup" />
+76-->[androidx.emoji2:emoji2:1.3.0] /home/fh-junior/.gradle/caches/transforms-3/82b277dc140e29c6a5e13d8fa9084a33/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+77            <meta-data
+77-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/fh-junior/.gradle/caches/transforms-3/ecf0bd12d1d08353aeb953f6aa2ae31d/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+78-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/fh-junior/.gradle/caches/transforms-3/ecf0bd12d1d08353aeb953f6aa2ae31d/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+79                android:value="androidx.startup" />
+79-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/fh-junior/.gradle/caches/transforms-3/ecf0bd12d1d08353aeb953f6aa2ae31d/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+80            <meta-data
+80-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+81-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+82                android:value="androidx.startup" />
+82-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+83        </provider>
+84
+85        <receiver
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+86            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+87            android:directBootAware="false"
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+88            android:enabled="true"
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+89            android:exported="true"
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+90            android:permission="android.permission.DUMP" >
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+91            <intent-filter>
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+92                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+93            </intent-filter>
+94            <intent-filter>
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+95                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+96            </intent-filter>
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+98                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+101                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/fh-junior/.gradle/caches/transforms-3/ca7b1d95681bcb093c7e5c43602b69b0/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+102            </intent-filter>
+103        </receiver>
+104    </application>
+105
+106</manifest>

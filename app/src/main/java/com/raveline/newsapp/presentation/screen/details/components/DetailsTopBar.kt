@@ -10,29 +10,44 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import com.raveline.newsapp.R
+import com.raveline.newsapp.domain.model.ArticleModel
 import com.raveline.newsapp.ui.theme.NewsAppTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailsTopBar(
-    isSelected: Boolean,
+    articleModel: ArticleModel?,
     onBrowsingClick: () -> Unit,
     onShareClick: () -> Unit,
     onBookmarkClick: () -> Unit,
     onBackClick: () -> Unit,
 ) {
 
+    val isBookmarkSelected: MutableState<Boolean> = remember { mutableStateOf(articleModel!!.isStored) }
+
     TopAppBar(
-        title = { },
+        title = {
+            Text(
+                text = articleModel?.title.toString(),
+                style = MaterialTheme.typography.titleMedium,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1
+            )
+        },
         modifier = Modifier.fillMaxWidth(),
         colors = TopAppBarDefaults.mediumTopAppBarColors(
             containerColor = Color.Transparent,
@@ -48,13 +63,22 @@ fun DetailsTopBar(
             }
         },
         actions = {
-            IconButton(onClick = onBookmarkClick) {
-                Icon(
-                    painter = if (isSelected) painterResource(id = R.drawable.baseline_bookmark_added_24) else painterResource(
-                        id = R.drawable.ic_bookmark
-                    ),
-                    contentDescription = "Bookmark Details TopBar"
-                )
+
+            IconButton(onClick = {
+                isBookmarkSelected.value = !isBookmarkSelected.value
+                onBookmarkClick()
+            }) {
+                if (isBookmarkSelected.value) {
+                    Icon(
+                        painter = painterResource(id = R.drawable.baseline_bookmark_added_24),
+                        contentDescription = "Bookmark Details TopBar",
+                    )
+                } else {
+                    Icon(
+                        painter = painterResource(id = R.drawable.ic_bookmark),
+                        contentDescription = "Bookmark Details TopBar",
+                    )
+                }
             }
             IconButton(onClick = onShareClick) {
                 Icon(
@@ -80,7 +104,7 @@ fun DetailsTopBarPreview() {
     NewsAppTheme {
         Box(modifier = Modifier.background(MaterialTheme.colorScheme.background)) {
             DetailsTopBar(
-                isSelected = true,
+                articleModel = null,
                 onBrowsingClick = { /*TODO*/ },
                 onShareClick = { /*TODO*/ },
                 onBookmarkClick = { /*TODO*/ },

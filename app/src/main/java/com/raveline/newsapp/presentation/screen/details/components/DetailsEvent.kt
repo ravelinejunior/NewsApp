@@ -4,5 +4,6 @@ import com.raveline.newsapp.domain.model.ArticleModel
 
 sealed class DetailsEvent {
     data class UpsertArticle( val article: ArticleModel) : DetailsEvent()
+    data class UpdateIconHeader(val article: ArticleModel):DetailsEvent()
     object RemoveSideEffect : DetailsEvent()
 }

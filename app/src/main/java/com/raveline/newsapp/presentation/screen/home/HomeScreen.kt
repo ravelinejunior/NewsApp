@@ -2,10 +2,19 @@ package com.raveline.newsapp.presentation.screen.home
 
 import android.os.Build
 import androidx.annotation.RequiresExtension
+import androidx.compose.animation.core.EaseIn
+import androidx.compose.animation.core.EaseInBounce
+import androidx.compose.animation.core.EaseInSine
+import androidx.compose.animation.core.EaseOutElastic
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,14 +24,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -35,17 +44,35 @@ import androidx.paging.compose.LazyPagingItems
 import com.raveline.newsapp.R
 import com.raveline.newsapp.domain.model.ArticleModel
 import com.raveline.newsapp.presentation.common.ArticleList
-import com.raveline.newsapp.presentation.common.SearchBar
+import com.raveline.newsapp.presentation.screen.home.components.HomeEvent
+import com.raveline.newsapp.presentation.screen.home.components.HomeState
 import com.raveline.newsapp.ui.theme.Dimens.ExtraSmallPadding
 import com.raveline.newsapp.ui.theme.Dimens.MediumPadding1
+import kotlinx.coroutines.delay
 
+/**
+ * `HomeScreen` is a composable function that displays the home screen of the news application.
+ * It's annotated with `@Composable`, indicating that it's a composable function that describes part of the UI.
+ *
+ * @property state The current state of the home screen.
+ * @property event A function type parameter that takes a `HomeEvent` and returns `Unit`.
+ * It's used to handle events in the `HomeScreen`.
+ * @property articles A `LazyPagingItems` of `ArticleModel` that represents the articles to be displayed.
+ * @property navigateToDetails A function type parameter that takes an `ArticleModel` and returns `Unit`.
+ * It's used to navigate to the details screen of a particular article.
+ *
+ * @method HomeScreen This function sets up the UI for the home screen.
+ */
 @RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun HomeScreen(
+    state: HomeState,
+    event: (HomeEvent) -> Unit,
     articles: LazyPagingItems<ArticleModel>,
     navigateToDetails: (ArticleModel) -> Unit,
 ) {
+
     val titles by remember {
         derivedStateOf {
             if (articles.itemCount > 10) {
@@ -95,11 +122,41 @@ fun HomeScreen(
 
         Spacer(modifier = Modifier.height(MediumPadding1))
 
+        val scrollState = rememberScrollState()
+
+        // Update the max scroll to start the animation
+        LaunchedEffect(scrollState.maxValue) {
+            event(HomeEvent.UpdateMaxScrollValue(newValue = scrollState.maxValue))
+        }
+
+        // Save the state of the current scroll position
+        LaunchedEffect(scrollState.value) {
+            event(HomeEvent.UpdateScrollValue(newValue = scrollState.value))
+        }
+
+        //Animate scroll
+        LaunchedEffect(state.maxScrollingValue) {
+            delay(500)
+            if (state.maxScrollingValue > 0) {
+                scrollState.animateScrollTo(
+                    value = state.maxScrollingValue,
+                    animationSpec = infiniteRepeatable(
+                        tween(
+                            durationMillis = (state.maxScrollingValue - state.scrollValue) * 50_000 / state.maxScrollingValue,
+                            easing = LinearEasing,
+                            delayMillis = 1000
+                        )
+                    )
+                )
+            }
+        }
+
         Text(
             text = titles, modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = MediumPadding1)
-                .basicMarquee(), fontSize = 12.sp, color = MaterialTheme.colorScheme.primary
+                .horizontalScroll(scrollState,false),
+            fontSize = 12.sp, color = MaterialTheme.colorScheme.primary
         )
 
         Spacer(modifier = Modifier.height(MediumPadding1))

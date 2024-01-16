@@ -5,6 +5,20 @@ public final class NewsNavigatorKt {
     @org.jetbrains.annotations.NotNull
     public static final java.lang.String articleModelKey = "article";
     
+    /**
+     * `NewsNavigator` is a composable function that manages the navigation of the news application.
+     * It's annotated with `@Composable`, indicating that it's a composable function that describes part of the UI.
+     *
+     * @property bottomNavigationItems A list of items to be displayed in the bottom navigation bar.
+     * @property navController A `NavController` that manages app navigation.
+     * @property backStackState The current state of the navigation back stack.
+     * @property selectedItem The index of the currently selected item in the bottom navigation bar.
+     * @property isBottomBarVisible A boolean value that determines whether the bottom navigation bar should be visible.
+     *
+     * @method NewsNavigator This function sets up the navigation for the application.
+     * @method Scaffold This function provides a framework that materializes the Material Design specification.
+     * @method NavHost This function sets up a navigation graph within the application.
+     */
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.O)
     @androidx.annotation.RequiresExtension(extension = android.os.Build.VERSION_CODES.S, version = 7)
     @androidx.compose.runtime.Composable

@@ -7,7 +7,7 @@ import com.raveline.newsapp.domain.model.ArticleModel
 
 @Database(
     entities = [ArticleModel::class],
-    version = 1
+    version = 2
 )
 @TypeConverters(NewsSourceTypeConverter::class)
 abstract class NewsDatabase : RoomDatabase() {

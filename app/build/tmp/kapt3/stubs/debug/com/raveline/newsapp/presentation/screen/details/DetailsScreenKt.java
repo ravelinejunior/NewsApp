@@ -3,6 +3,16 @@ package com.raveline.newsapp.presentation.screen.details;
 @kotlin.Metadata(mv = {1, 8, 0}, k = 2, xi = 48, d1 = {"\u0000 \n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u001a2\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u00032\u0012\u0010\u0004\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u00010\u00052\f\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00010\bH\u0007\u001a\b\u0010\t\u001a\u00020\u0001H\u0007\u00a8\u0006\n"}, d2 = {"DetailsScreen", "", "article", "Lcom/raveline/newsapp/domain/model/ArticleModel;", "event", "Lkotlin/Function1;", "Lcom/raveline/newsapp/presentation/screen/details/components/DetailsEvent;", "navigateUp", "Lkotlin/Function0;", "DetailsScreenPreview", "app_debug"})
 public final class DetailsScreenKt {
     
+    /**
+     * This is a `DetailsScreen` function in Kotlin, which is a part of the Jetpack Compose UI toolkit.
+     * It's annotated with `@Composable`, indicating that it's a composable function that describes part of the UI.
+     *
+     * @param article This is the article object that the screen will display.
+     * @param event This is a function type parameter that takes a `DetailsEvent` and returns `Unit`.
+     * It's used to handle events in the `DetailsScreen`.
+     * @param navigateUp This is a function type parameter that takes no arguments and returns `Unit`.
+     * It's used to navigate up in the navigation stack.
+     */
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.O)
     @androidx.compose.runtime.Composable
     public static final void DetailsScreen(@org.jetbrains.annotations.NotNull

@@ -30,7 +30,7 @@ import com.raveline.newsapp.presentation.screen.details.DetailsScreen
 import com.raveline.newsapp.presentation.screen.details.components.DetailsEvent
 import com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel
 import com.raveline.newsapp.presentation.screen.home.HomeScreen
-import com.raveline.newsapp.presentation.screen.home.HomeViewModel
+import com.raveline.newsapp.presentation.screen.home.components.HomeViewModel
 import com.raveline.newsapp.presentation.screen.search.SearchScreen
 import com.raveline.newsapp.presentation.screen.search.components.SearchViewModel
 import com.raveline.newsapp.utils.Constants.NavBarItemsList
@@ -132,14 +132,18 @@ fun NewsNavigator() {
             ) {
                 val viewModel: HomeViewModel = hiltViewModel()
                 val articles = viewModel.getNews.collectAsLazyPagingItems()
-                HomeScreen(articles = articles,
-                    navigateToDetails = { article ->
-                        navigateToDetails(
-                            navController = navController,
-                            articleModel = article
-                        )
-                    }
-                )
+                val state by viewModel.state
+                val event = viewModel::onEvent
+                HomeScreen(
+                    state = state,
+                    event = event,
+                    articles = articles
+                ) { article ->
+                    navigateToDetails(
+                        navController = navController,
+                        articleModel = article
+                    )
+                }
             }
 
             composable(route = Route.SearchScreenRoute.route) {

@@ -1,6 +1,8 @@
 package com.raveline.newsapp.presentation.common
 
 import android.content.res.Configuration
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -37,7 +39,11 @@ import com.raveline.newsapp.ui.theme.Dimens.ArticleCardSize
 import com.raveline.newsapp.ui.theme.Dimens.ExtraSmallPadding
 import com.raveline.newsapp.ui.theme.Dimens.ExtraSmallPadding2
 import com.raveline.newsapp.ui.theme.NewsAppTheme
+import java.time.OffsetDateTime
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun ArticleCard(
     modifier: Modifier = Modifier,
@@ -96,8 +102,13 @@ fun ArticleCard(
                 )
 
                 Spacer(modifier = Modifier.width(ExtraSmallPadding2))
+
+                val odt = OffsetDateTime.parse(article.publishedAt)
+                val dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:ss", Locale.getDefault())
+                val formattedDate = "At:${dtf.format(odt)}"
+
                 Text(
-                    text = article.publishedAt,
+                    text = formattedDate,
                     style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                     color = colorResource(
                         id = R.color.body
@@ -109,6 +120,7 @@ fun ArticleCard(
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Preview(showBackground = true)
 @Preview(showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
