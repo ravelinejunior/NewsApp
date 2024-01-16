@@ -12,12 +12,15 @@ import kotlinx.coroutines.flow.Flow
 interface NewsDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertNews(articleModel: ArticleModel)
+    suspend fun upsertNews(articleModel: ArticleModel)
 
     @Delete
     suspend fun deleteNews(articleModel: ArticleModel)
 
-    @Query("SELECT * FROM ARTICLES_TABLE")
+    @Query("SELECT * FROM ARTICLES_TABLE ORDER BY id DESC")
     fun getAllStoredNews(): Flow<List<ArticleModel>>
+
+    @Query("SELECT * FROM ARTICLES_TABLE WHERE url =:url")
+    suspend fun getSelectedArticle(url:String):ArticleModel?
 
 }

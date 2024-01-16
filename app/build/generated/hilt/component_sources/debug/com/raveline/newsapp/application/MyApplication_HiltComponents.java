@@ -5,6 +5,7 @@ import com.raveline.newsapp.di.AppModule;
 import com.raveline.newsapp.di.DatabaseModule;
 import com.raveline.newsapp.di.NetworkModule;
 import com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel_HiltModules;
+import com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel_HiltModules;
 import com.raveline.newsapp.presentation.screen.home.HomeViewModel_HiltModules;
 import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel_HiltModules;
 import com.raveline.newsapp.presentation.screen.search.components.SearchViewModel_HiltModules;
@@ -162,6 +163,7 @@ public final class MyApplication_HiltComponents {
   @Subcomponent(
       modules = {
           BookmarkViewModel_HiltModules.KeyModule.class,
+          DetailsViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           HomeViewModel_HiltModules.KeyModule.class,
           MainViewModel_HiltModules.KeyModule.class,
@@ -205,6 +207,7 @@ public final class MyApplication_HiltComponents {
   @Subcomponent(
       modules = {
           BookmarkViewModel_HiltModules.BindsModule.class,
+          DetailsViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           HomeViewModel_HiltModules.BindsModule.class,
           MainViewModel_HiltModules.BindsModule.class,

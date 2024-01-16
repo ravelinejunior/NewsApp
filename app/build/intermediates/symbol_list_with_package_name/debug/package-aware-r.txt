@@ -691,7 +691,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
-drawable background
+drawable baseline_bookmark_added_24
 drawable baseline_newspaper_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -741,7 +741,6 @@ drawable notify_panel_notification_icon_bg
 drawable onboarding1
 drawable onboarding2
 drawable onboarding3
-drawable placeholder
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light

@@ -1,5 +1,8 @@
 package com.raveline.newsapp.utils
 
+import com.raveline.newsapp.R
+import com.raveline.newsapp.presentation.navigation.components.NewsBottomNavigationItem
+
 object Constants {
     const val USER_SETTINGS_STORE_KEY = "USER_SETTINGS_STORE_KEY"
     const val APP_ENTRY_STORE_KEY = "NEWS_APP"
@@ -8,6 +11,11 @@ object Constants {
     const val NEWS_DATABASE_NAME = "NEWS_DATABASE"
     const val ARTICLES_NEWS_DATABASE_TABLE = "ARTICLES_TABLE"
     val SourcesApiQueryList =  listOf("bbc-news", "abc-news", "google-news", "the-verge", "business-insider")
+    val NavBarItemsList = listOf(
+        NewsBottomNavigationItem(R.drawable.ic_home, "Home"),
+        NewsBottomNavigationItem(R.drawable.ic_search, "Search"),
+        NewsBottomNavigationItem(R.drawable.ic_bookmark, "Bookmark"),
+    )
 }
 
 object RouteConstants {

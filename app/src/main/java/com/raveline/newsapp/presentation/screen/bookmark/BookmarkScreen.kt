@@ -25,6 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import com.raveline.newsapp.domain.model.ArticleModel
 import com.raveline.newsapp.presentation.common.ArticleList
 import com.raveline.newsapp.presentation.navigation.Route
 import com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkState
@@ -35,7 +36,7 @@ import com.raveline.newsapp.ui.theme.Dimens.MediumPadding1
 @Composable
 fun BookmarkScreen(
     state: BookmarkState,
-    navigate: (String) -> Unit
+    navigateToDetails: (ArticleModel) -> Unit
 ) {
     Box(
         modifier = Modifier
@@ -54,17 +55,8 @@ fun BookmarkScreen(
                     .fillMaxWidth()
                     .padding(end = Dimens.MediumPadding2),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween
+                horizontalArrangement = Arrangement.Center
             ) {
-                IconButton(onClick = {
-                    navigate(Route.NewsNavigatorScreenRoute.route)
-                }) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
-                        tint = MaterialTheme.colorScheme.onBackground,
-                        contentDescription = "Arrow Back Icon"
-                    )
-                }
 
                 Text(
                     text = "Bookmark",
@@ -82,8 +74,8 @@ fun BookmarkScreen(
 
             ArticleList(
                 articles = state.articleList,
-                onClick = {
-                    navigate(Route.DetailsScreenRoute.route)
+                onClick = { article ->
+                    navigateToDetails(article)
                 }
             )
         }

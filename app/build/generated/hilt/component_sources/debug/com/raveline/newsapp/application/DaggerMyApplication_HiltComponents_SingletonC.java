@@ -28,6 +28,8 @@ import com.raveline.newsapp.domain.use_cases.news.NewsUseCaseModel;
 import com.raveline.newsapp.domain.use_cases.news.SearchNewsUseCase;
 import com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel;
 import com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel;
+import com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.raveline.newsapp.presentation.screen.home.HomeViewModel;
 import com.raveline.newsapp.presentation.screen.home.HomeViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel;
@@ -419,7 +421,7 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(5).add(BookmarkViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SearchViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(6).add(BookmarkViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(DetailsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SearchViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -447,6 +449,8 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     private Provider<BookmarkViewModel> bookmarkViewModelProvider;
 
+    private Provider<DetailsViewModel> detailsViewModelProvider;
+
     private Provider<HomeViewModel> homeViewModelProvider;
 
     private Provider<MainViewModel> mainViewModelProvider;
@@ -473,15 +477,16 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
       this.bookmarkViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
-      this.homeViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
-      this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
-      this.onBoardingViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
-      this.searchViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
+      this.detailsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.homeViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
+      this.onBoardingViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
+      this.searchViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(5).put("com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel", ((Provider) bookmarkViewModelProvider)).put("com.raveline.newsapp.presentation.screen.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.raveline.newsapp.presentation.viewmodel.MainViewModel", ((Provider) mainViewModelProvider)).put("com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel", ((Provider) onBoardingViewModelProvider)).put("com.raveline.newsapp.presentation.screen.search.components.SearchViewModel", ((Provider) searchViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(6).put("com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel", ((Provider) bookmarkViewModelProvider)).put("com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel", ((Provider) detailsViewModelProvider)).put("com.raveline.newsapp.presentation.screen.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.raveline.newsapp.presentation.viewmodel.MainViewModel", ((Provider) mainViewModelProvider)).put("com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel", ((Provider) onBoardingViewModelProvider)).put("com.raveline.newsapp.presentation.screen.search.components.SearchViewModel", ((Provider) searchViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -508,16 +513,19 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
           case 0: // com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel 
           return (T) new BookmarkViewModel(singletonCImpl.provideGetNewsUseCaseProvider.get());
 
-          case 1: // com.raveline.newsapp.presentation.screen.home.HomeViewModel 
+          case 1: // com.raveline.newsapp.presentation.screen.details.components.DetailsViewModel 
+          return (T) new DetailsViewModel(singletonCImpl.provideGetNewsUseCaseProvider.get());
+
+          case 2: // com.raveline.newsapp.presentation.screen.home.HomeViewModel 
           return (T) new HomeViewModel(singletonCImpl.provideGetNewsUseCaseProvider.get());
 
-          case 2: // com.raveline.newsapp.presentation.viewmodel.MainViewModel 
+          case 3: // com.raveline.newsapp.presentation.viewmodel.MainViewModel 
           return (T) new MainViewModel(singletonCImpl.providesAppEntryUseCaseProvider.get());
 
-          case 3: // com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel 
+          case 4: // com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel 
           return (T) new OnBoardingViewModel(singletonCImpl.providesAppEntryUseCaseProvider.get());
 
-          case 4: // com.raveline.newsapp.presentation.screen.search.components.SearchViewModel 
+          case 5: // com.raveline.newsapp.presentation.screen.search.components.SearchViewModel 
           return (T) new SearchViewModel(viewModelCImpl.searchNewsUseCase());
 
           default: throw new AssertionError(id);
@@ -603,11 +611,11 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     private Provider<NewsApi> provideRetrofitInstanceProvider;
 
-    private Provider<NewsRepository> provideNewsRepositoryProvider;
-
     private Provider<NewsDatabase> provideNewsDatabaseProvider;
 
     private Provider<NewsDao> provideNewsDaoProvider;
+
+    private Provider<NewsRepository> provideNewsRepositoryProvider;
 
     private Provider<NewsUseCaseModel> provideGetNewsUseCaseProvider;
 
@@ -625,9 +633,9 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
       this.provideHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 3));
       this.provideRetrofitInstanceProvider = DoubleCheck.provider(new SwitchingProvider<NewsApi>(singletonCImpl, 2));
-      this.provideNewsRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<NewsRepository>(singletonCImpl, 1));
       this.provideNewsDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<NewsDatabase>(singletonCImpl, 5));
       this.provideNewsDaoProvider = DoubleCheck.provider(new SwitchingProvider<NewsDao>(singletonCImpl, 4));
+      this.provideNewsRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<NewsRepository>(singletonCImpl, 1));
       this.provideGetNewsUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<NewsUseCaseModel>(singletonCImpl, 0));
       this.providesLocalUserManagerProvider = DoubleCheck.provider(new SwitchingProvider<LocalUserManager>(singletonCImpl, 7));
       this.providesAppEntryUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<AppEntryUseCasesModel>(singletonCImpl, 6));
@@ -667,10 +675,10 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
       public T get() {
         switch (id) {
           case 0: // com.raveline.newsapp.domain.use_cases.news.NewsUseCaseModel 
-          return (T) AppModule_ProvideGetNewsUseCaseFactory.provideGetNewsUseCase(singletonCImpl.provideNewsRepositoryProvider.get(), singletonCImpl.provideNewsDaoProvider.get());
+          return (T) AppModule_ProvideGetNewsUseCaseFactory.provideGetNewsUseCase(singletonCImpl.provideNewsRepositoryProvider.get());
 
           case 1: // com.raveline.newsapp.domain.repository.NewsRepository 
-          return (T) AppModule_ProvideNewsRepositoryFactory.provideNewsRepository(singletonCImpl.provideRetrofitInstanceProvider.get());
+          return (T) AppModule_ProvideNewsRepositoryFactory.provideNewsRepository(singletonCImpl.provideRetrofitInstanceProvider.get(), singletonCImpl.provideNewsDaoProvider.get());
 
           case 2: // com.raveline.newsapp.data.remote.services.NewsApi 
           return (T) NetworkModule_ProvideRetrofitInstanceFactory.provideRetrofitInstance(singletonCImpl.provideHttpClientProvider.get());

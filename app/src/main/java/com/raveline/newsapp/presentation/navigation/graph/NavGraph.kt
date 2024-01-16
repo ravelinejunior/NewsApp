@@ -8,16 +8,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
-import androidx.paging.compose.collectAsLazyPagingItems
 import com.raveline.newsapp.presentation.navigation.Route
-import com.raveline.newsapp.presentation.screen.bookmark.BookmarkScreen
-import com.raveline.newsapp.presentation.screen.bookmark.components.BookmarkViewModel
-import com.raveline.newsapp.presentation.screen.home.HomeScreen
-import com.raveline.newsapp.presentation.screen.home.HomeViewModel
+import com.raveline.newsapp.presentation.navigation.components.NewsNavigator
 import com.raveline.newsapp.presentation.screen.onboarding.OnBoardingScreen
 import com.raveline.newsapp.presentation.screen.onboarding.components.OnBoardingViewModel
-import com.raveline.newsapp.presentation.screen.search.SearchScreen
-import com.raveline.newsapp.presentation.screen.search.components.SearchViewModel
 
 /**
  * `NavGraph` is a composable function that represents the navigation graph of the application.
@@ -57,50 +51,15 @@ fun NavGraph(
             }
         }
 
-
         navigation(
             route = Route.NewsNavigationRoute.route,
             startDestination = Route.NewsNavigatorScreenRoute.route
         ) {
             composable(route = Route.NewsNavigatorScreenRoute.route) {
-                val homeViewModel: HomeViewModel = hiltViewModel()
-                val articles = homeViewModel.getNews.collectAsLazyPagingItems()
-                HomeScreen(articles = articles, navigate = { route ->
-                    navController.navigate(route)
-                })
+                NewsNavigator()
             }
         }
 
-        navigation(
-            route = Route.DetailsScreenRoute.route,
-            startDestination = Route.SearchScreenRoute.route
-        ) {
-            composable(route = Route.SearchScreenRoute.route) {
-                val searchViewModel: SearchViewModel = hiltViewModel()
 
-                SearchScreen(
-                    state = searchViewModel.state.value,
-                    events = searchViewModel::onEvent,
-                    navigate = {
-                        navController.navigate(it)
-                    }
-                )
-            }
-        }
-
-        navigation(
-            startDestination = Route.BookmarkScreenRoute.route,
-            route = Route.SearchScreenRoute.route
-        ) {
-            composable(route = Route.BookmarkScreenRoute.route) {
-                val bookmarkViewModel: BookmarkViewModel = hiltViewModel()
-                BookmarkScreen(
-                    state = bookmarkViewModel.state.value,
-                    navigate = {
-                        navController.navigate(it)
-                    },
-                )
-            }
-        }
     }
 }

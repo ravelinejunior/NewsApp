@@ -1,5 +1,6 @@
 package com.raveline.newsapp.di;
 
+import com.raveline.newsapp.data.local.NewsDao;
 import com.raveline.newsapp.data.remote.services.NewsApi;
 import com.raveline.newsapp.domain.repository.NewsRepository;
 import dagger.internal.DaggerGenerated;
@@ -26,20 +27,25 @@ import javax.inject.Provider;
 public final class AppModule_ProvideNewsRepositoryFactory implements Factory<NewsRepository> {
   private final Provider<NewsApi> newsApiProvider;
 
-  public AppModule_ProvideNewsRepositoryFactory(Provider<NewsApi> newsApiProvider) {
+  private final Provider<NewsDao> daoProvider;
+
+  public AppModule_ProvideNewsRepositoryFactory(Provider<NewsApi> newsApiProvider,
+      Provider<NewsDao> daoProvider) {
     this.newsApiProvider = newsApiProvider;
+    this.daoProvider = daoProvider;
   }
 
   @Override
   public NewsRepository get() {
-    return provideNewsRepository(newsApiProvider.get());
+    return provideNewsRepository(newsApiProvider.get(), daoProvider.get());
   }
 
-  public static AppModule_ProvideNewsRepositoryFactory create(Provider<NewsApi> newsApiProvider) {
-    return new AppModule_ProvideNewsRepositoryFactory(newsApiProvider);
+  public static AppModule_ProvideNewsRepositoryFactory create(Provider<NewsApi> newsApiProvider,
+      Provider<NewsDao> daoProvider) {
+    return new AppModule_ProvideNewsRepositoryFactory(newsApiProvider, daoProvider);
   }
 
-  public static NewsRepository provideNewsRepository(NewsApi newsApi) {
-    return Preconditions.checkNotNullFromProvides(AppModule.INSTANCE.provideNewsRepository(newsApi));
+  public static NewsRepository provideNewsRepository(NewsApi newsApi, NewsDao dao) {
+    return Preconditions.checkNotNullFromProvides(AppModule.INSTANCE.provideNewsRepository(newsApi, dao));
   }
 }

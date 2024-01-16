@@ -1,6 +1,5 @@
 package com.raveline.newsapp.di;
 
-import com.raveline.newsapp.data.local.NewsDao;
 import com.raveline.newsapp.domain.repository.NewsRepository;
 import com.raveline.newsapp.domain.use_cases.news.NewsUseCaseModel;
 import dagger.internal.DaggerGenerated;
@@ -27,25 +26,21 @@ import javax.inject.Provider;
 public final class AppModule_ProvideGetNewsUseCaseFactory implements Factory<NewsUseCaseModel> {
   private final Provider<NewsRepository> repositoryProvider;
 
-  private final Provider<NewsDao> daoProvider;
-
-  public AppModule_ProvideGetNewsUseCaseFactory(Provider<NewsRepository> repositoryProvider,
-      Provider<NewsDao> daoProvider) {
+  public AppModule_ProvideGetNewsUseCaseFactory(Provider<NewsRepository> repositoryProvider) {
     this.repositoryProvider = repositoryProvider;
-    this.daoProvider = daoProvider;
   }
 
   @Override
   public NewsUseCaseModel get() {
-    return provideGetNewsUseCase(repositoryProvider.get(), daoProvider.get());
+    return provideGetNewsUseCase(repositoryProvider.get());
   }
 
   public static AppModule_ProvideGetNewsUseCaseFactory create(
-      Provider<NewsRepository> repositoryProvider, Provider<NewsDao> daoProvider) {
-    return new AppModule_ProvideGetNewsUseCaseFactory(repositoryProvider, daoProvider);
+      Provider<NewsRepository> repositoryProvider) {
+    return new AppModule_ProvideGetNewsUseCaseFactory(repositoryProvider);
   }
 
-  public static NewsUseCaseModel provideGetNewsUseCase(NewsRepository repository, NewsDao dao) {
-    return Preconditions.checkNotNullFromProvides(AppModule.INSTANCE.provideGetNewsUseCase(repository, dao));
+  public static NewsUseCaseModel provideGetNewsUseCase(NewsRepository repository) {
+    return Preconditions.checkNotNullFromProvides(AppModule.INSTANCE.provideGetNewsUseCase(repository));
   }
 }

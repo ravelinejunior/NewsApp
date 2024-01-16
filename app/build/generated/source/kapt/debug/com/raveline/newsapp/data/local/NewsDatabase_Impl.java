@@ -39,9 +39,9 @@ public final class NewsDatabase_Impl extends NewsDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `ARTICLES_TABLE` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `source` TEXT NOT NULL, `author` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `url` TEXT NOT NULL, `urlToImage` TEXT NOT NULL, `publishedAt` TEXT NOT NULL, `content` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `ARTICLES_TABLE` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `source` TEXT NOT NULL, `author` TEXT, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `url` TEXT NOT NULL, `urlToImage` TEXT NOT NULL, `publishedAt` TEXT NOT NULL, `content` TEXT NOT NULL, `isStored` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'fa7a00efc3592572f308730df3f9991e')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c81f236b4e86700811dcd4df44757307')");
       }
 
       @Override
@@ -85,16 +85,17 @@ public final class NewsDatabase_Impl extends NewsDatabase {
 
       @Override
       public RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsARTICLESTABLE = new HashMap<String, TableInfo.Column>(9);
+        final HashMap<String, TableInfo.Column> _columnsARTICLESTABLE = new HashMap<String, TableInfo.Column>(10);
         _columnsARTICLESTABLE.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsARTICLESTABLE.put("source", new TableInfo.Column("source", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsARTICLESTABLE.put("author", new TableInfo.Column("author", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsARTICLESTABLE.put("author", new TableInfo.Column("author", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsARTICLESTABLE.put("title", new TableInfo.Column("title", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsARTICLESTABLE.put("description", new TableInfo.Column("description", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsARTICLESTABLE.put("url", new TableInfo.Column("url", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsARTICLESTABLE.put("urlToImage", new TableInfo.Column("urlToImage", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsARTICLESTABLE.put("publishedAt", new TableInfo.Column("publishedAt", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsARTICLESTABLE.put("content", new TableInfo.Column("content", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsARTICLESTABLE.put("isStored", new TableInfo.Column("isStored", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysARTICLESTABLE = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesARTICLESTABLE = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoARTICLESTABLE = new TableInfo("ARTICLES_TABLE", _columnsARTICLESTABLE, _foreignKeysARTICLESTABLE, _indicesARTICLESTABLE);
@@ -106,7 +107,7 @@ public final class NewsDatabase_Impl extends NewsDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "fa7a00efc3592572f308730df3f9991e", "4a4fafe2253011fb783cb74150cdb9d2");
+    }, "c81f236b4e86700811dcd4df44757307", "2e2b0c6d5f263553485e1256bf94bdc1");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

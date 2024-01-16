@@ -12,6 +12,7 @@ import com.raveline.newsapp.domain.use_cases.app_entry.ReadAppEntryUseCase
 import com.raveline.newsapp.domain.use_cases.app_entry.SaveAppEntryUseCase
 import com.raveline.newsapp.domain.use_cases.news.DeleteArticleUseCase
 import com.raveline.newsapp.domain.use_cases.news.GetNewsUseCase
+import com.raveline.newsapp.domain.use_cases.news.GetSelectedArticleUseCase
 import com.raveline.newsapp.domain.use_cases.news.GetStoredArticlesUseCase
 import com.raveline.newsapp.domain.use_cases.news.NewsUseCaseModel
 import com.raveline.newsapp.domain.use_cases.news.SearchNewsUseCase
@@ -42,21 +43,21 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideNewsRepository(newsApi: NewsApi): NewsRepository =
-        NewsRepositoryImpl(newsApi)
+    fun provideNewsRepository(newsApi: NewsApi, dao: NewsDao): NewsRepository =
+        NewsRepositoryImpl(newsApi, newsDao = dao)
 
     @Provides
     @Singleton
     fun provideGetNewsUseCase(
         repository: NewsRepository,
-        dao: NewsDao
     ): NewsUseCaseModel =
         NewsUseCaseModel(
             newsUseCase = GetNewsUseCase(repository),
             searchNewsUseCase = SearchNewsUseCase(repository),
-            upsertArticleUseCase = UpsertArticleUseCase(dao),
-            deleteArticleUseCase = DeleteArticleUseCase(dao),
-            getStoredArticlesUseCase = GetStoredArticlesUseCase(dao)
+            upsertArticleUseCase = UpsertArticleUseCase(repository),
+            deleteArticleUseCase = DeleteArticleUseCase(repository),
+            getStoredArticlesUseCase = GetStoredArticlesUseCase(repository),
+            getSelectedArticleUseCase = GetSelectedArticleUseCase(repository)
         )
 
 }

@@ -1,6 +1,6 @@
 package com.raveline.newsapp.domain.use_cases.news;
 
-import com.raveline.newsapp.data.local.NewsDao;
+import com.raveline.newsapp.domain.repository.NewsRepository;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.QualifierMetadata;
@@ -22,22 +22,22 @@ import javax.inject.Provider;
     "KotlinInternalInJava"
 })
 public final class DeleteArticleUseCase_Factory implements Factory<DeleteArticleUseCase> {
-  private final Provider<NewsDao> daoProvider;
+  private final Provider<NewsRepository> repositoryProvider;
 
-  public DeleteArticleUseCase_Factory(Provider<NewsDao> daoProvider) {
-    this.daoProvider = daoProvider;
+  public DeleteArticleUseCase_Factory(Provider<NewsRepository> repositoryProvider) {
+    this.repositoryProvider = repositoryProvider;
   }
 
   @Override
   public DeleteArticleUseCase get() {
-    return newInstance(daoProvider.get());
+    return newInstance(repositoryProvider.get());
   }
 
-  public static DeleteArticleUseCase_Factory create(Provider<NewsDao> daoProvider) {
-    return new DeleteArticleUseCase_Factory(daoProvider);
+  public static DeleteArticleUseCase_Factory create(Provider<NewsRepository> repositoryProvider) {
+    return new DeleteArticleUseCase_Factory(repositoryProvider);
   }
 
-  public static DeleteArticleUseCase newInstance(NewsDao dao) {
-    return new DeleteArticleUseCase(dao);
+  public static DeleteArticleUseCase newInstance(NewsRepository repository) {
+    return new DeleteArticleUseCase(repository);
   }
 }

@@ -28,6 +28,6 @@ val pages = listOf(
     Page(
         title = "Intent Filter",
         description = "IntentFilter é um objeto que permite filtrar os intents que um componente do app pode receber e processar, baseado na ação, nos dados e na categoria do intent. Por exemplo, você pode usar um intentFilter para declarar que uma atividade pode lidar com intents de compartilhamento, ou que um broadcast receiver pode lidar com intents de bateria baixa, ou que um serviço pode lidar com intents de reprodução de mídia.",
-        image = R.drawable.background
+        image = R.drawable.onboarding1
     )
 )

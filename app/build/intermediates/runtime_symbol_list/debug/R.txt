@@ -690,7 +690,7 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f07004c
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f07004d
 int drawable abc_textfield_search_material 0x7f07004e
 int drawable abc_vector_test 0x7f07004f
-int drawable background 0x7f070050
+int drawable baseline_bookmark_added_24 0x7f070050
 int drawable baseline_newspaper_24 0x7f070051
 int drawable btn_checkbox_checked_mtrl 0x7f070052
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f070053
@@ -740,10 +740,9 @@ int drawable notify_panel_notification_icon_bg 0x7f07007e
 int drawable onboarding1 0x7f07007f
 int drawable onboarding2 0x7f070080
 int drawable onboarding3 0x7f070081
-int drawable placeholder 0x7f070082
-int drawable test_level_drawable 0x7f070083
-int drawable tooltip_frame_dark 0x7f070084
-int drawable tooltip_frame_light 0x7f070085
+int drawable test_level_drawable 0x7f070082
+int drawable tooltip_frame_dark 0x7f070083
+int drawable tooltip_frame_light 0x7f070084
 int font poppins_bold 0x7f080000
 int font poppins_regular 0x7f080001
 int font poppins_semibold 0x7f080002

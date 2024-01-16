@@ -62,7 +62,7 @@ fun ArticleCard(
                 .allowHardware(true)
                 .error(R.drawable.ic_network_error)
                 .memoryCachePolicy(CachePolicy.ENABLED)
-                .placeholder(R.drawable.placeholder)
+                .placeholder(R.drawable.baseline_newspaper_24)
                 .build(),
             contentDescription = "Image Article Description",
             contentScale = ContentScale.Crop

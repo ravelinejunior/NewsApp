@@ -8,7 +8,7 @@ color placeholder
 color shimmer
 color text_medium
 color text_title
-drawable background
+drawable baseline_bookmark_added_24
 drawable baseline_newspaper_24
 drawable ic_back_arrow
 drawable ic_bookmark
@@ -28,7 +28,6 @@ drawable logo
 drawable onboarding1
 drawable onboarding2
 drawable onboarding3
-drawable placeholder
 font poppins_bold
 font poppins_regular
 font poppins_semibold

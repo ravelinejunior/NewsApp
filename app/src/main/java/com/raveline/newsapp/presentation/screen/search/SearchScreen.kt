@@ -26,6 +26,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.raveline.newsapp.domain.model.ArticleModel
 import com.raveline.newsapp.presentation.common.ArticleList
 import com.raveline.newsapp.presentation.common.SearchBar
 import com.raveline.newsapp.presentation.navigation.Route
@@ -41,7 +42,7 @@ import com.raveline.newsapp.ui.theme.Dimens.MediumPadding2
  *
  * @param state An instance of `SearchState` which represents the current state of the search screen.
  * @param events A function that takes an instance of `SearchEvents` and performs actions based on the event.
- * @param navigate A function that takes a route as a `String` and navigates to the corresponding screen.
+ * @param navigateToDetails A function that takes a route as a `String` and navigates to the corresponding screen.
  *
  * @function SearchBar This is a composable function that displays the search bar. It takes in the current query, a boolean to indicate if the search bar is read-only, a function to handle value changes, and a function to handle search action.
  * @function ArticleList This is a composable function that displays the list of articles. It takes in the list of articles and a function to handle click events on the articles.
@@ -51,7 +52,7 @@ import com.raveline.newsapp.ui.theme.Dimens.MediumPadding2
 fun SearchScreen(
     state: SearchState,
     events: (SearchEvents) -> Unit,
-    navigate: (String) -> Unit
+    navigateToDetails: (ArticleModel) -> Unit
 ) {
     Box(
         modifier = Modifier
@@ -63,35 +64,6 @@ fun SearchScreen(
                 .padding(ExtraSmallPadding2)
                 .statusBarsPadding()
         ) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(end = MediumPadding2),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                IconButton(onClick = {
-                    navigate(Route.NewsNavigatorScreenRoute.route)
-                }) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
-                        tint = MaterialTheme.colorScheme.onBackground,
-                        contentDescription = "Arrow Back Icon"
-                    )
-                }
-
-                Text(
-                    text = "Search Screen",
-                    style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.onBackground,
-                    maxLines = 1,
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = TextAlign.Center,
-                    fontFamily = FontFamily.Monospace,
-                    overflow = TextOverflow.Ellipsis
-                )
-
-            }
 
             SearchBar(
                 text = state.query,
@@ -109,8 +81,8 @@ fun SearchScreen(
                 val articles = data.collectAsLazyPagingItems()
                 ArticleList(
                     articles = articles,
-                    onClick = {
-                        navigate(Route.BookmarkScreenRoute.route)
+                    onClick = { article ->
+                        navigateToDetails(article)
                     },
                 )
 

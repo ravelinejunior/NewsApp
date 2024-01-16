@@ -1,166 +1,170 @@
 [
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_network_error.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_network_error.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_bookmark.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_bookmark.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/font_poppins_regular.ttf.flat",
-        "source": "com.raveline.newsapp-main-77:/font/poppins_regular.ttf"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/raw_searching_data.json.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/raw/searching_data.json"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_launcher_background.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_logo.png.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/logo.png"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_background.png.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/background.png"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/xml_backup_rules.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/xml/backup_rules.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_onboarding2.png.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/onboarding2.png"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_baseline_newspaper_24.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/baseline_newspaper_24.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_logo.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_logo.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_network.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_network.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_time.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_time.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_home.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_home.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_search.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_search.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_logo.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_logo.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/font_poppins_bold.ttf.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/font/poppins_bold.ttf"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/xml_data_extraction_rules.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/xml/data_extraction_rules.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_onboarding2.png.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/onboarding2.png"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_baseline_newspaper_24.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/baseline_newspaper_24.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_placeholder.jpeg.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/placeholder.jpeg"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_onboarding1.png.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/onboarding1.png"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/raw_no_data.json.flat",
-        "source": "com.raveline.newsapp-main-77:/raw/no_data.json"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/xml_backup_rules.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_home.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_home.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_onboarding3.png.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/onboarding3.png"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/font_poppins_semibold.ttf.flat",
-        "source": "com.raveline.newsapp-main-77:/font/poppins_semibold.ttf"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_search.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_search.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_close.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_close.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/raw_searching_data.json.flat",
-        "source": "com.raveline.newsapp-main-77:/raw/searching_data.json"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/xml_data_extraction_rules.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/font_poppins_bold.ttf.flat",
-        "source": "com.raveline.newsapp-main-77:/font/poppins_bold.ttf"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/raw_no_data.json.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/raw/no_data.json"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_network_error.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_network_error.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_network.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_network.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_baseline_bookmark_added_24.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/baseline_bookmark_added_24.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_placeholder.jpeg.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/placeholder.jpeg"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/font_poppins_semibold.ttf.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/font/poppins_semibold.ttf"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_bookmark.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_bookmark.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable-night_baseline_newspaper_24.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable-night/baseline_newspaper_24.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable-night_baseline_newspaper_24.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable-night/baseline_newspaper_24.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_search_document.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_search_document.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_back_arrow.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_back_arrow.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_logo.png.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/logo.png"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_background.png.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/background.png"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_search_document.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_search_document.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_close.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_close.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_time.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_time.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_onboarding3.png.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/onboarding3.png"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_onboarding1.png.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/onboarding1.png"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_splash.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_splash.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/font_poppins_regular.ttf.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/font/poppins_regular.ttf"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_preferences.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_preferences.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_splash.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_splash.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/drawable_ic_back_arrow.xml.flat",
-        "source": "com.raveline.newsapp-main-77:/drawable/ic_back_arrow.xml"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/drawable_ic_preferences.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/drawable/ic_preferences.xml"
     },
     {
-        "merged": "com.raveline.newsapp-merged_res-75:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.raveline.newsapp-main-77:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-merged_res-75:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/fh-junior/.gradle/daemon/8.2/com.raveline.newsapp-main-77:/mipmap-hdpi/ic_launcher.webp"
     }
 ]

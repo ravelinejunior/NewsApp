@@ -24,6 +24,7 @@ import com.raveline.newsapp.ui.theme.NewsAppTheme
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailsTopBar(
+    isSelected: Boolean,
     onBrowsingClick: () -> Unit,
     onShareClick: () -> Unit,
     onBookmarkClick: () -> Unit,
@@ -49,7 +50,9 @@ fun DetailsTopBar(
         actions = {
             IconButton(onClick = onBookmarkClick) {
                 Icon(
-                    painter = painterResource(id = R.drawable.ic_bookmark),
+                    painter = if (isSelected) painterResource(id = R.drawable.baseline_bookmark_added_24) else painterResource(
+                        id = R.drawable.ic_bookmark
+                    ),
                     contentDescription = "Bookmark Details TopBar"
                 )
             }
@@ -74,14 +77,15 @@ fun DetailsTopBar(
 @Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun DetailsTopBarPreview() {
-   NewsAppTheme {
-       Box(modifier = Modifier.background(MaterialTheme.colorScheme.background)) {
-           DetailsTopBar(
-               onBrowsingClick = { /*TODO*/ },
-               onShareClick = { /*TODO*/ },
-               onBookmarkClick = { /*TODO*/ }) {
-
-           }
-       }
-   }
+    NewsAppTheme {
+        Box(modifier = Modifier.background(MaterialTheme.colorScheme.background)) {
+            DetailsTopBar(
+                isSelected = true,
+                onBrowsingClick = { /*TODO*/ },
+                onShareClick = { /*TODO*/ },
+                onBookmarkClick = { /*TODO*/ },
+                onBackClick = {},
+            )
+        }
+    }
 }

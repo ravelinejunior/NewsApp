@@ -36,7 +36,6 @@ import com.raveline.newsapp.R
 import com.raveline.newsapp.domain.model.ArticleModel
 import com.raveline.newsapp.presentation.common.ArticleList
 import com.raveline.newsapp.presentation.common.SearchBar
-import com.raveline.newsapp.presentation.navigation.Route
 import com.raveline.newsapp.ui.theme.Dimens.ExtraSmallPadding
 import com.raveline.newsapp.ui.theme.Dimens.MediumPadding1
 
@@ -45,7 +44,7 @@ import com.raveline.newsapp.ui.theme.Dimens.MediumPadding1
 @Composable
 fun HomeScreen(
     articles: LazyPagingItems<ArticleModel>,
-    navigate: (String) -> Unit
+    navigateToDetails: (ArticleModel) -> Unit,
 ) {
     val titles by remember {
         derivedStateOf {
@@ -57,10 +56,6 @@ fun HomeScreen(
                 ""
             }
         }
-    }
-
-    var searchText by remember {
-        mutableStateOf("")
     }
 
     Column(
@@ -100,20 +95,6 @@ fun HomeScreen(
 
         Spacer(modifier = Modifier.height(MediumPadding1))
 
-        SearchBar(
-            text = searchText,
-            readOnly = true,
-            onValueChanged = {
-                searchText = it
-            },
-            onSearch = {},
-            onClick = {
-                navigate(Route.SearchScreenRoute.route)
-            }
-        )
-
-        Spacer(modifier = Modifier.height(MediumPadding1))
-
         Text(
             text = titles, modifier = Modifier
                 .fillMaxWidth()
@@ -127,7 +108,7 @@ fun HomeScreen(
             modifier = Modifier.padding(horizontal = MediumPadding1),
             articles = articles,
             onClick = { article ->
-                navigate(Route.DetailsScreenRoute.route)
+                navigateToDetails(article)
             }
         )
     }
